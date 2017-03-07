@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Zedruu\'sLifeCounter</string>
+    <string name="app_name">ZedruusLifeCounter</string>
     <string name="increment">+</string>
     <string name="decrement">-</string>
     <string name="life_total_player_one_description">Player One Life Total</string>

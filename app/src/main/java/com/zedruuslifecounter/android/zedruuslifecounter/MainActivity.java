@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void decrementPlayerOnePoisonCounter(View view){
         poisonPlayerOne -= 1;
-        displayPlayerTwoLifeTotal(poisonPlayerOne);
+        displayPlayerOnePoisonTotal(poisonPlayerOne);
     }
 
     public void incrementPlayerTwoPoisonCounter(View view){
@@ -88,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         poisonPlayerTwo = 0;
         energyPlayerOne = 0;
         energyPlayerTwo = 0;
+        displayPlayerOneLifeTotal(lifePlayerOne);
+        displayPlayerTwoLifeTotal(lifePlayerTwo);
+        displayPlayerOnePoisonTotal(poisonPlayerOne);
+        displayPlayerTwoPoisonTotal(poisonPlayerTwo);
+        displayPlayerOneEnergyTotal(energyPlayerOne);
+        displayPlayerTwoEnergyTotal(energyPlayerTwo);
     }
 
     public void displayPlayerOneLifeTotal(int lifeTotal){
@@ -120,11 +126,27 @@ public class MainActivity extends AppCompatActivity {
         energyView2.setText(String.valueOf(energyTotal2));
     }
 
-    public void revealPoisonButton(View view){
-        //if (Visibility.GONE == id.poison_button)
+    public void revealPoisonButton(View view) {
+        View poisonCounterView = findViewById(R.id.player_one_poison_layout_view);
+        View poisonCounterView2 = findViewById(R.id.player_two_poison_layout_view);
+        if (poisonCounterView.getVisibility() == View.VISIBLE) {
+            poisonCounterView.setVisibility(View.INVISIBLE);
+            poisonCounterView2.setVisibility(View.INVISIBLE);
+        } else {
+            poisonCounterView.setVisibility(View.VISIBLE);
+            poisonCounterView2.setVisibility(View.VISIBLE);
+        }
     }
 
     public void revealEnergyButton(View view){
-        //if (Visibiltiy.GONE == id.energy_button)
+        View energyCounterView = findViewById(R.id.player_one_energy_layout_view);
+        View energyCounterView2 = findViewById(R.id.player_two_energy_layout_view);
+        if (energyCounterView.getVisibility() == View.VISIBLE){
+            energyCounterView.setVisibility(View.INVISIBLE);
+            energyCounterView2.setVisibility(View.INVISIBLE);
+        } else {
+            energyCounterView.setVisibility(View.VISIBLE);
+            energyCounterView2.setVisibility(View.VISIBLE);
+        }
     }
 }
