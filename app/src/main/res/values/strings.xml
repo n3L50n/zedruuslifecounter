@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Zedruu\'sLifeCounter</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="life_total_player_one_description">Player One Life Total</string>
+    <string name="life_total_player_two_description">Player Two Life Total</string>
+    <string name="poison_description">Reveal Poison Button</string>
+    <string name="energy_description">Reveal Energy Button</string>
 </resources>

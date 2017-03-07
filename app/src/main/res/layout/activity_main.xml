@@ -10,42 +10,157 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
+        android:layout_weight="4"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/increment_player_one_life"
-            style="@style/IncrementDecrementButtonStyle"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/life_player_one"
-            style="@style/LifeTotalTextView"/>
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="incrementPlayerOnePoisonCounter"
+                android:text="@string/increment"/>
 
-        <Button
-            android:id="@+id/decrement_player_one_life"
-            style="@style/IncrementDecrementButtonStyle"/>
+            <Button
+                android:id="@+id/player_one_poison"
+                style="@style/PoisonEnergyLogos"
+                android:background="@drawable/poison_logo"/>
+
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="decrementPlayerOnePoisonCounter"
+                android:text="@string/decrement"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/increment_player_one_life"
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="incrementPlayerOneLifeTotal"
+                android:text="@string/increment"/>
+
+            <TextView
+                android:id="@+id/life_player_one"
+                style="@style/LifeTotalTextView"
+                android:contentDescription="@string/life_total_player_one_description"
+                android:text="20"/>
+
+            <Button
+                android:id="@+id/decrement_player_one_life"
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="decrementPlayerOneLifeTotal"
+                android:text="@string/decrement"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="incrementPlayerOneEnergyCounter"
+                android:text="@string/increment"/>
+
+            <Button
+                android:id="@+id/player_one_energy"
+                style="@style/PoisonEnergyLogos"
+                android:background="@drawable/energy_logo"/>
+
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="decrementPlayerOneEnergyCounter"
+                android:text="@string/decrement"/>
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
+        android:layout_weight="4"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/increment_player_two_life"
-            style="@style/IncrementDecrementButtonStyle"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/life_player_two"
-            style="@style/LifeTotalTextView"/>
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="incrementPlayerTwoPoisonCounter"
+                android:text="@string/increment"/>
 
-        <Button
-            android:id="@+id/decrement_player_two_life"
-            style="@style/IncrementDecrementButtonStyle"/>
+            <Button
+                style="@style/PoisonEnergyLogos"
+                android:background="@drawable/poison_logo"/>
+
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="decrementPlayerTwoPoisonCounter"
+                android:text="@string/decrement"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/increment_player_two_life"
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="incrementPlayerTwoLifeTotal"
+                android:text="@string/increment"/>
+
+            <TextView
+                android:id="@+id/life_player_two"
+                style="@style/LifeTotalTextView"
+                android:contentDescription="@string/life_total_player_two_description"
+                android:text="20"/>
+
+            <Button
+                android:id="@+id/decrement_player_two_life"
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="decrementPlayerTwoLifeTotal"
+                android:text="@string/decrement"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="incrementPlayerTwoEnergyCounter"
+                android:text="@string/increment"/>
+
+            <Button
+                style="@style/PoisonEnergyLogos"
+                android:background="@drawable/energy_logo"/>
+
+            <Button
+                style="@style/IncrementDecrementTextStyle"
+                android:onClick="decrementPlayerTwoEnergyCounter"
+                android:text="@string/decrement"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
@@ -53,17 +168,24 @@
         <Button
             android:id="@+id/poison_button"
             style="@style/ControlButtonStyle"
+            android:layout_toLeftOf="@+id/reset_button"
+            android:background="@drawable/poison_logo"
+            android:contentDescription="@string/poison_description"
             android:onClick="revealPoisonButton"/>
 
         <Button
             android:id="@+id/reset_button"
             style="@style/ControlButtonStyle"
+            android:layout_centerHorizontal="true"
             android:onClick="resetLife"/>
 
         <Button
             android:id="@+id/energy_button"
             style="@style/ControlButtonStyle"
+            android:layout_toRightOf="@+id/reset_button"
+            android:background="@drawable/energy_logo"
+            android:contentDescription="@string/energy_description"
             android:onClick="revealEnergyButton"/>
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
