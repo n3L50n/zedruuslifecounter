@@ -11,7 +11,7 @@
     <style name="LifeTotalTextView">
         <item name="android:gravity">center_horizontal|center_vertical</item>
         <item name="android:textSize">@dimen/life_total_text_size</item>
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
@@ -23,12 +23,21 @@
         <item name="android:layout_width">wrap_content</item>
     </style>
 
+    <style name="SecondaryTotalTextStyle">
+        <item name="android:text">0</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/secondary_total_text_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <style name="ControlButtonStyle">
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">48dp</item>
     </style>
 
     <style name="PoisonEnergyLogos">
+        <item name="android:layout_gravity">center</item>
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">48dp</item>
     </style>
