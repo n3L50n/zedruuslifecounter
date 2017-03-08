@@ -9,20 +9,20 @@
 
     <LinearLayout
         android:id="@+id/player_one_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/border_margin"
         android:layout_weight="4"
         android:background="@color/magic_white"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/player_one_poison_layout_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="invisible">
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <Button
                 style="@style/IncrementDecrementTextStyle"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/player_life_total_margin_left"
             android:layout_marginRight="@dimen/player_life_total_margin_right"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/increment_player_one_life"
@@ -75,8 +75,8 @@
             android:id="@+id/player_one_energy_layout_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="invisible">
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <Button
                 style="@style/IncrementDecrementTextStyle"
@@ -102,19 +102,19 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/border_margin"
         android:layout_weight="4"
         android:background="@color/magic_blue"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/player_two_poison_layout_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="invisible">
 
             <Button
@@ -142,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/player_life_total_margin_left"
             android:layout_marginRight="@dimen/player_life_total_margin_right"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/increment_player_two_life"
@@ -168,7 +168,7 @@
             android:id="@+id/player_two_energy_layout_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="invisible">
 
             <Button
@@ -196,7 +196,7 @@
     <LinearLayout
         android:id="@+id/player_two_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
         android:layout_margin="@dimen/border_margin"
         android:layout_weight="1"
         android:background="@color/magic_white"
@@ -204,7 +204,8 @@
 
         <!--I'd like to call a dialog or dialog fragment to
         display options to change the background colors
-        but this is beyond the rubric for this assignment. V2.0 :) -->
+        but this is beyond the rubric for this assignment.
+        Maybe I'll learn how to do this and it can be v2.0 :) -->
         <Button
             android:id="@+id/change_colors_button"
             style="@style/ControlButtonStyle"

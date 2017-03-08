@@ -199,8 +199,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void changeColors(View view) {
-        View v = findViewById(R.id.player_one_layout);
-        v.setBackgroundColor(getResources().getColor(R.color.magic_red));
-    }
+//    /**
+//     *
+//     * I'd like to write a method that displays a dialog giving the user a chance to change the background colors.
+//     */
+//    public void changeColors(View view) {
+//        View v = findViewById(R.id.player_one_layout);
+//        v.setBackgroundColor(getResources().getColor(R.color.magic_red));
+//    }
 }
