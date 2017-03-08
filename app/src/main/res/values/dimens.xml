@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="life_total_text_size">84sp</dimen>
-    <dimen name="plus_minus_text_size">42sp</dimen>
+    <dimen name="plus_minus_text_size">56sp</dimen>
     <dimen name="secondary_total_text_size">42sp</dimen>
     <dimen name="divider_size">1dp</dimen>
 </resources>

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void incrementPlayerOneLifeTotal(View view){
+//        if (view.setOnLongClickListener() == )
         lifePlayerOne += 1;
         displayPlayerOneLifeTotal(lifePlayerOne);
     }
