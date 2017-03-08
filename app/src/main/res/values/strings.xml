@@ -6,4 +6,5 @@
     <string name="life_total_player_two_description">Player Two Life Total</string>
     <string name="poison_description">Reveal Poison Button</string>
     <string name="energy_description">Reveal Energy Button</string>
+    <string name="color_change_button_description">Change Colors Button</string>
 </resources>

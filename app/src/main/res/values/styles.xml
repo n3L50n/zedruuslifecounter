@@ -9,7 +9,7 @@
     </style>
 
     <style name="LifeTotalTextView">
-        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/life_total_text_size</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -31,17 +31,19 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <!--Styles for control buttons including color change, reset, poison, and energy-->
     <style name="ControlButtonStyle">
-        <item name="android:layout_marginRight">24dp</item>
-        <item name="android:layout_marginLeft">24dp</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_marginRight">@dimen/control_button_margin_right</item>
+        <item name="android:layout_marginLeft">@dimen/control_button_margin_left</item>
+        <item name="android:layout_height">@dimen/control_button_height</item>
+        <item name="android:layout_width">@dimen/control_button_width</item>
     </style>
 
+    <!--Styles for the Poison and Energy Logos within the Player One and Player Two Score Keeping area-->
     <style name="PoisonEnergyLogos">
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">@dimen/poison_energy_logo_height</item>
+        <item name="android:layout_width">@dimen/poison_energy_logo_width</item>
     </style>
 
 </resources>

@@ -3,13 +3,17 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/magic_color_border"
               android:orientation="vertical"
               tools:context="com.zedruuslifecounter.android.zedruuslifecounter.MainActivity">
 
     <LinearLayout
+        android:id="@+id/player_one_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/border_margin"
         android:layout_weight="4"
+        android:background="@color/magic_white"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -43,6 +47,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/player_life_total_margin_left"
+            android:layout_marginRight="@dimen/player_life_total_margin_right"
             android:orientation="vertical">
 
             <Button
@@ -95,15 +101,12 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"
-        android:background="@color/colorAccent"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/border_margin"
         android:layout_weight="4"
+        android:background="@color/magic_blue"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -137,6 +140,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/player_life_total_margin_left"
+            android:layout_marginRight="@dimen/player_life_total_margin_right"
             android:orientation="vertical">
 
             <Button
@@ -188,39 +193,47 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"
-        android:background="@color/colorAccent"/>
-
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/player_two_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/border_margin"
         android:layout_weight="1"
+        android:background="@color/magic_white"
         android:gravity="center">
+
+        <!--I'd like to call a dialog or dialog fragment to
+        display options to change the background colors
+        but this is beyond the rubric for this assignment. V2.0 :) -->
+        <Button
+            android:visibility="gone"
+            android:id="@+id/change_colors_button"
+            style="@style/ControlButtonStyle"
+            android:background="@drawable/ic_color_lens_black_24px"
+            android:contentDescription="@string/color_change_button_description"
+            android:onClick="changeColors"/>
 
         <Button
             android:id="@+id/poison_button"
             style="@style/ControlButtonStyle"
-            android:layout_toLeftOf="@+id/reset_button"
             android:background="@drawable/poison_logo"
             android:contentDescription="@string/poison_description"
             android:onClick="revealPoisonButton"/>
 
         <Button
-            android:background="@drawable/ic_refresh_black_24px"
             android:id="@+id/reset_button"
             style="@style/ControlButtonStyle"
             android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_refresh_black_24px"
             android:onClick="resetLife"/>
 
         <Button
             android:id="@+id/energy_button"
             style="@style/ControlButtonStyle"
-            android:layout_toRightOf="@+id/reset_button"
             android:background="@drawable/energy_logo"
             android:contentDescription="@string/energy_description"
             android:onClick="revealEnergyButton"/>
-    </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
