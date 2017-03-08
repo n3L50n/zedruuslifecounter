@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Styles for control buttons including color change, reset, poison, and energy-->
+    <style name="ControlButtonStyle">
+        <item name="android:layout_marginRight">@dimen/control_button_margin_right</item>
+        <item name="android:layout_marginLeft">@dimen/control_button_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/control_button_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/control_button_margin_bottom</item>
+        <item name="android:layout_height">@dimen/control_button_height</item>
+        <item name="android:layout_width">@dimen/control_button_width</item>
+    </style>
+
+    <style name="SecondaryTotalTextStyle">
+        <item name="android:text">0</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/secondary_total_text_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/secondary_total_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/secondary_total_margin_right</item>
+    </style>
+</resources>
